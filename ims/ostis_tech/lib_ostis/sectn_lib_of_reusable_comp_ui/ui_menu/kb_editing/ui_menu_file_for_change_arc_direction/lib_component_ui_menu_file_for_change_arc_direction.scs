@@ -2,6 +2,7 @@ lib_component_ui_menu_file_for_change_arc_direction
 => nrel_main_idtf:
 	[Компонент библиотеки. Команда пользовательского интерфейса изменения направления дуги]
 	(* <- lang_ru;; *);
+=> nrel_main_idtf:	
 	[Library component. User interface command of change arc direction]
 	(* <- lang_en;; *);
 
