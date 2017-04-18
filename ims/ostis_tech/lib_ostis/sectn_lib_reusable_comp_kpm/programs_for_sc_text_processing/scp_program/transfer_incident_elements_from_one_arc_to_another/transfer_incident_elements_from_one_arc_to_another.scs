@@ -2,6 +2,7 @@ lib_component_proc_of_transferring_incident_elements_from_one_arc_to_another
 => nrel_main_idtf:
 	[Компонент библиотеки. scp-программа переноса инцидентных элементов с одной дуги на другую]
 	(* <- lang_ru;; *);
+=> nrel_main_idtf:
 	[Library component. scp-program of transferring incident elements from one arc to another]
 	(* <- lang_en;; *);
 
@@ -18,10 +19,9 @@ lib_component_proc_of_transferring_incident_elements_from_one_arc_to_another
 		...
 		(*
 		-> rrel_example:
-			"file://htmls/Proc_of_transferring_incident_elements_from_one_arc_to_another.html" 
+			"file://htmls/Proc_Transfer_Incident_Elements_From_One_Arc_To_Another.html" 
 				(* <- lang_ru;; *);;
 		*);;
 	*);;
 
-lib_component_proc_of_transferring_incident_elements_from_one_arc_to_another = [*^"file://proc_of_transferring_incident_elements_from_one_arc_to_another.scsi"*];;
-
+lib_component_proc_of_transferring_incident_elements_from_one_arc_to_another = [*^"file://transfer_incident_elements_from_one_arc_to_another.scsi"*];;

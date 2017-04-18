@@ -1,4 +1,12 @@
-scp_program-> proc_of_transferring_incident_elements_from_one_arc_to_another
+proc_of_transferring_incident_elements_from_one_arc_to_another
+=> nrel_main_idtf:
+	[scp-программа переноса инцидентных элементов с одной дуги на другую]
+	(* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[scp-program of transferring incident elements from one arc to another]
+	(* <- lang_en;; *);;
+
+scp_program -> proc_of_transferring_incident_elements_from_one_arc_to_another
 	(*
 	-> rrel_params: .proc_of_transferring_incident_elements_from_one_arc_to_another_param
 		(*
@@ -45,8 +53,8 @@ scp_program-> proc_of_transferring_incident_elements_from_one_arc_to_another
 
 			-> rrel_set_2: rrel_fixed: rrel_scp_var: _set_of_arcs;;
 
-        		=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_fill_set_of_input_arcs_2;;
-        		*);;
+			=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_fill_set_of_input_arcs_2;;
+			*);;
 
 		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_fill_set_of_input_arcs_2
 			(*
@@ -58,8 +66,8 @@ scp_program-> proc_of_transferring_incident_elements_from_one_arc_to_another
 
 			-> rrel_set_2: rrel_fixed: rrel_scp_var: _set_of_arcs;;
 
-        		=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_fill_set_of_input_arcs_3;;
-        		*);;
+			=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_fill_set_of_input_arcs_3;;
+			*);;
 		
 		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_fill_set_of_input_arcs_3
 			(*
@@ -71,19 +79,19 @@ scp_program-> proc_of_transferring_incident_elements_from_one_arc_to_another
 
 			-> rrel_set_2: rrel_fixed: rrel_scp_var: _set_of_arcs;;
 
-        		=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_input_arc;; 
-        		*);;
+			=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_input_arc;; 
+			*);;
 
 		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_input_arc
 			(*
-		  	<- searchElStr3;;
+				<- searchElStr3;;
 
 			-> rrel_1: rrel_fixed: rrel_scp_var: _set_of_arcs;;
 			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
 			-> rrel_3: rrel_assign: rrel_scp_var: _found_arc;;
 
-		  	=> nrel_then: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_erase_from_set;;
-		  	=> nrel_else: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_fill_set_of_output_arcs_1;; 
+				=> nrel_then: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_erase_from_set;;
+				=> nrel_else: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_fill_set_of_output_arcs_1;; 
 			*);;
 
 		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_erase_from_set
@@ -103,11 +111,10 @@ scp_program-> proc_of_transferring_incident_elements_from_one_arc_to_another
 			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
 			-> rrel_3: rrel_fixed: rrel_scp_var: _found_arc;;
 
-        		=> nrel_then: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_input_arc;; 
+			=> nrel_then: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_input_arc;; 
 			=> nrel_else: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_fill_possible_sections;;
-        		*);;
+			*);;
 		
-
 		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_fill_possible_sections
 			(*
 			<- searchSetStr3;;
@@ -118,8 +125,8 @@ scp_program-> proc_of_transferring_incident_elements_from_one_arc_to_another
 
 			-> rrel_set_1: rrel_fixed: rrel_scp_var: _possible_sections;;
 
-        		=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_sections;;
-        		*);;
+			=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_sections;;
+			*);;
 
 		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_sections
 			(*
@@ -129,9 +136,9 @@ scp_program-> proc_of_transferring_incident_elements_from_one_arc_to_another
 			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
 			-> rrel_3: rrel_assign: rrel_scp_var: _section;;
 
-        		=> nrel_then: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_erase_possible_section;;  
+			=> nrel_then: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_erase_possible_section;;  
 			=> nrel_else: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_any_section;; 
-        		*);;
+			*);;
 
 		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_erase_possible_section
 			(*
@@ -150,9 +157,9 @@ scp_program-> proc_of_transferring_incident_elements_from_one_arc_to_another
 			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
 			-> rrel_3: rrel_fixed: rrel_scp_var: _section;;
 
-        		=> nrel_then: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_section_is_found;; 
+			=> nrel_then: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_section_is_found;; 
 			=> nrel_else: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_sections;;
-        		*);;
+			*);;
 	
 		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_section_is_found
 			(*
@@ -167,13 +174,13 @@ scp_program-> proc_of_transferring_incident_elements_from_one_arc_to_another
 
 		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_any_section
 			(*
-		  	<- searchElStr3;;
+			<- searchElStr3;;
 
 			-> rrel_1: rrel_fixed: rrel_scp_var: _sections;;
 			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
 			-> rrel_3: rrel_assign: rrel_scp_var: _section;;
 
-		  	=> nrel_then: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_elem;;   
+			=> nrel_then: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_elem;;   
 			=> nrel_else: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_input_arc;;  
 			*);;
 		
@@ -185,8 +192,8 @@ scp_program-> proc_of_transferring_incident_elements_from_one_arc_to_another
 			-> rrel_2: rrel_fixed: rrel_scp_var: _found_arc;;
 			-> rrel_3: rrel_assign: rrel_scp_var: _par;;
 
-        		=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_pos_const_perm;;
-        		*);;
+			=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_pos_const_perm;;
+			*);;
 
 		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_pos_const_perm
 			(*
@@ -279,13 +286,13 @@ scp_program-> proc_of_transferring_incident_elements_from_one_arc_to_another
 
 		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_all_sections
 			(*
-		  	<- searchElStr3;;
+			<- searchElStr3;;
 
 			-> rrel_1: rrel_fixed: rrel_scp_var: _sections;;
 			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
 			-> rrel_3: rrel_assign: rrel_scp_var: _section;;
 
-		  	=> nrel_then: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_delete_section;;
+			=> nrel_then: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_delete_section;;
 			=> nrel_else: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_call_proc_of_transferring_incident_elements_from_one_arc_to_another;;
 			*);;
 
@@ -311,26 +318,26 @@ scp_program-> proc_of_transferring_incident_elements_from_one_arc_to_another
 
 		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_call_proc_of_transferring_incident_elements_from_one_arc_to_another
 			(*
-		  	<- call;;
+			<- call;;
 
-		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_transferring_incident_elements_from_one_arc_to_another;;
-		  	-> rrel_2: rrel_fixed: rrel_scp_const: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_call_proc_of_transferring_incident_elements_from_one_arc_to_another_params 
+			-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_transferring_incident_elements_from_one_arc_to_another;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_call_proc_of_transferring_incident_elements_from_one_arc_to_another_params 
 				(*
 				-> rrel_1: rrel_fixed: rrel_scp_var: _found_arc;;
 				-> rrel_2: rrel_fixed: rrel_scp_var: _new_arc;;
 				*);;
-		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr_1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _descr_1;;
 
-		  	=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_waitreturn_proc_of_transferring_incident_elements_from_one_arc_to_another;;
+			=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_waitreturn_proc_of_transferring_incident_elements_from_one_arc_to_another;;
 			*);;
 
 		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_waitreturn_proc_of_transferring_incident_elements_from_one_arc_to_another
 			(*
-		  	<- waitReturn;;
+			<- waitReturn;;
 
-		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr_1;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _descr_1;;
 
-		  	=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_input_arc;;
+			=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_input_arc;;
 			*);;
 		
 		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_fill_set_of_output_arcs_1
@@ -343,8 +350,8 @@ scp_program-> proc_of_transferring_incident_elements_from_one_arc_to_another
 
 			-> rrel_set_2: rrel_fixed: rrel_scp_var: _set_of_arcs;;
 
-        		=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_fill_set_of_output_arcs_2;;
-        		*);;
+			=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_fill_set_of_output_arcs_2;;
+			*);;
 
 		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_fill_set_of_output_arcs_2
 			(*
@@ -356,8 +363,8 @@ scp_program-> proc_of_transferring_incident_elements_from_one_arc_to_another
 
 			-> rrel_set_2: rrel_fixed: rrel_scp_var: _set_of_arcs;;
 
-        		=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_fill_set_of_output_arcs_3;;
-        		*);;
+			=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_fill_set_of_output_arcs_3;;
+			*);;
 		
 		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_fill_set_of_output_arcs_3
 			(*
@@ -369,19 +376,19 @@ scp_program-> proc_of_transferring_incident_elements_from_one_arc_to_another
 
 			-> rrel_set_2: rrel_fixed: rrel_scp_var: _set_of_arcs;;
 
-        		=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_output_arc;; 
-        		*);;
+			=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_output_arc;; 
+			*);;
 
 		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_output_arc
 			(*
-		  	<- searchElStr3;;
+			<- searchElStr3;;
 
 			-> rrel_1: rrel_fixed: rrel_scp_var: _set_of_arcs;;
 			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
 			-> rrel_3: rrel_assign: rrel_scp_var: _found_arc;;
 
-		  	=> nrel_then: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_erase_from_set_of_arcs;;
-		  	=> nrel_else: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_del_temp_set;; 
+			=> nrel_then: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_erase_from_set_of_arcs;;
+			=> nrel_else: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_del_temp_set;; 
 			*);;
 
 		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_erase_from_set_of_arcs
@@ -403,8 +410,8 @@ scp_program-> proc_of_transferring_incident_elements_from_one_arc_to_another
 
 			-> rrel_set_1: rrel_fixed: rrel_scp_var: _possible_sections;;
 
-        		=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_sections_1;;
-        		*);;
+			=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_sections_1;;
+			*);;
 
 		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_sections_1
 			(*
@@ -414,9 +421,9 @@ scp_program-> proc_of_transferring_incident_elements_from_one_arc_to_another
 			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
 			-> rrel_3: rrel_assign: rrel_scp_var: _section;;
 
-        		=> nrel_then: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_erase_section;; 
+			=> nrel_then: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_erase_section;; 
 			=> nrel_else: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_any_section_exist;; 
-        		*);;
+			*);;
 
 		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_erase_section
 			(*
@@ -435,9 +442,9 @@ scp_program-> proc_of_transferring_incident_elements_from_one_arc_to_another
 			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
 			-> rrel_3: rrel_fixed: rrel_scp_var: _section;;
 
-        		=> nrel_then: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_section_has_found;; 
+			=> nrel_then: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_section_has_found;; 
 			=> nrel_else: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_sections_1;; 
-        		*);;
+			*);;
 	
 		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_section_has_found
 			(*
@@ -470,8 +477,8 @@ scp_program-> proc_of_transferring_incident_elements_from_one_arc_to_another
 			-> rrel_2: rrel_fixed: rrel_scp_var: _found_arc;;
 			-> rrel_3: rrel_assign: rrel_scp_var: _elem;;
 
-        		=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_pos_const_perm_arc;;  
-        		*);;
+			=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_pos_const_perm_arc;;  
+			*);;
 
 		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_is_pos_const_perm_arc
 			(*
@@ -596,26 +603,26 @@ scp_program-> proc_of_transferring_incident_elements_from_one_arc_to_another
 
 		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_call_proc_of_transferring_incident_elements_from_one_arc_to_another_1 
 			(*
-		  	<- call;;
+			<- call;;
 
-		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_transferring_incident_elements_from_one_arc_to_another;;
-		  	-> rrel_2: rrel_fixed: rrel_scp_const: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_call_proc_of_transferring_incident_elements_from_one_arc_to_another_1_params 
-				(*
-				-> rrel_1: rrel_fixed: rrel_scp_var: _found_arc;;
-				-> rrel_2: rrel_fixed: rrel_scp_var: _new_arc;;
-				*);;
-		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr_2;;
+			-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_transferring_incident_elements_from_one_arc_to_another;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_call_proc_of_transferring_incident_elements_from_one_arc_to_another_1_params 
+			(*
+			-> rrel_1: rrel_fixed: rrel_scp_var: _found_arc;;
+			-> rrel_2: rrel_fixed: rrel_scp_var: _new_arc;;
+			*);;
+			-> rrel_3: rrel_assign: rrel_scp_var: _descr_2;;
 
-		  	=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_waitreturn_proc_of_transferring_incident_elements_from_one_arc_to_another_1;;
+			=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_waitreturn_proc_of_transferring_incident_elements_from_one_arc_to_another_1;;
 			*);;
 
 		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_waitreturn_proc_of_transferring_incident_elements_from_one_arc_to_another_1
 			(*
-		  	<- waitReturn;;
+			<- waitReturn;;
 
-		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr_2;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _descr_2;;
 
-		  	=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_output_arc;;
+			=> nrel_goto: .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_find_output_arc;;
 			*);;
 
 		-> .proc_of_transferring_incident_elements_from_one_arc_to_another_operator_del_temp_set
