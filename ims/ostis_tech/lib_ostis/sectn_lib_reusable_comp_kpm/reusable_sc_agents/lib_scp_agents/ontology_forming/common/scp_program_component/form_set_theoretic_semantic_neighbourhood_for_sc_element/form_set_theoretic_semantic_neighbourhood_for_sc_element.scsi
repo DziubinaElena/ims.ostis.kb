@@ -1,3 +1,11 @@
+proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element
+=> nrel_main_idtf:
+	[scp-программа формирования теоретико-множественной семантической окрестности sc-элемента]
+	(* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[scp-program of forming set theoretic semantic neighbourhood for sc-element]
+	(* <- lang_en;; *);;
+
 scp_program -> proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element
 	(*
 	-> rrel_params: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_params 
