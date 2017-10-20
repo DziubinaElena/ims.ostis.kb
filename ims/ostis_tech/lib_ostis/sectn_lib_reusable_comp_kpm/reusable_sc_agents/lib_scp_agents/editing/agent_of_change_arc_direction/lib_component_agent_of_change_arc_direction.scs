@@ -2,6 +2,7 @@ lib_component_agent_of_change_arc_direction
 => nrel_main_idtf:
 	[Компонент библиотеки. sc-агент изменения направления дуги]
 	(* <- lang_ru;; *);
+=> nrel_main_idtf:
 	[Library component. sc-agent of change arc direction]
 	(* <- lang_en;; *);
 

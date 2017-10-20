@@ -1,7 +1,10 @@
 sc_agent_of_change_arc_direction
 => nrel_main_idtf:
-	[sc-агент изменения направления дуги] (* <- lang_ru;; *);
-	[sc-agent of change arc direction] (* <- lang_en;; *);
+	[sc-агент изменения направления дуги]
+	(* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[sc-agent of change arc direction]
+	(* <- lang_en;; *);
 
 <- abstract_sc_agent;
 

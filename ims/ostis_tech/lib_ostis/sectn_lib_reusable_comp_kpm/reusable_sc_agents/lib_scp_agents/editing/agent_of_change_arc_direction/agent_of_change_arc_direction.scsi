@@ -1,8 +1,11 @@
 agent_of_change_arc_direction
 => nrel_main_idtf:
-	[агентная scp-программа изменения направления дуги] (* <- lang_ru;; *);
-	[agent scp-program of change arc direction] (* <- lang_en;; *);
-	<- agent_scp_program;;
+	[агентная scp-программа изменения направления дуги]
+	(* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[agent scp-program of change arc direction]
+	(* <- lang_en;; *);
+<- agent_scp_program;;
 
 scp_program -> agent_of_change_arc_direction 
 	(*
@@ -27,26 +30,26 @@ scp_program -> agent_of_change_arc_direction
 
 		-> .agent_of_change_arc_direction_operator1B
 			(*
-		  	<- searchElStr3;;
+			<- searchElStr3;;
 
-		  	-> rrel_1: rrel_fixed: rrel_scp_const: action_to_change_arc_direction;;
-		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-		  	-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
+			-> rrel_1: rrel_fixed: rrel_scp_const: action_to_change_arc_direction;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
 
-		  	=> nrel_then: .agent_of_change_arc_direction_operator1C;;
-		  	=> nrel_else: .agent_of_change_arc_direction_operator_return;;
+			=> nrel_then: .agent_of_change_arc_direction_operator1C;;
+			=> nrel_else: .agent_of_change_arc_direction_operator_return;;
 			*);;
-		
+
 		-> .agent_of_change_arc_direction_operator1C
 			(*
-		  	<- searchElStr3;;
+			<- searchElStr3;;
 
 			-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
-			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
 			-> rrel_3: rrel_assign: rrel_scp_var: _param;;
 
-		  	=> nrel_then: .agent_of_change_arc_direction_operator_check_is_edge;;
-		  	=> nrel_else: .agent_of_change_arc_direction_operator_return;;
+			=> nrel_then: .agent_of_change_arc_direction_operator_check_is_edge;;
+			=> nrel_else: .agent_of_change_arc_direction_operator_return;;
 			*);;
 
 		-> .agent_of_change_arc_direction_operator_check_is_edge
@@ -89,13 +92,13 @@ scp_program -> agent_of_change_arc_direction
 
 			=> nrel_goto: .agent_of_change_arc_direction_operator_gen_arc;;
 			*);;
-		
+
 		-> .agent_of_change_arc_direction_operator_gen_arc
 			(*
 			<- genElStr3;;
 
 			-> rrel_1: rrel_fixed: rrel_scp_var: _node_2;;
-			-> rrel_2: rrel_assign: rrel_const: rrel_pos_const_perm: rrel_scp_var: _result_arc;;
+			-> rrel_2: rrel_assign: rrel_const: rrel_scp_var: rrel_pos_const_perm: _result_arc;;
 			-> rrel_3: rrel_fixed: rrel_scp_var: _node_1;;
 
 			=> nrel_goto: .agent_of_change_arc_direction_operator_gen_set_of_possible_structs;; 
@@ -111,13 +114,13 @@ scp_program -> agent_of_change_arc_direction
 
 			=> nrel_goto: .agent_of_change_arc_direction_operator_gen_binary_arc;;
 			*);;
-		
+
 		-> .agent_of_change_arc_direction_operator_gen_binary_arc
 			(*
 			<- genElStr3;;
 
 			-> rrel_1: rrel_fixed: rrel_scp_var: _node_2;;
-			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: rrel_const: _result_arc;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: rrel_const: _result_arc;;
 			-> rrel_3: rrel_fixed: rrel_scp_var: _node_1;;
 
 			=> nrel_goto: .agent_of_change_arc_direction_operator_gen_set_of_possible_structs;;
@@ -146,25 +149,25 @@ scp_program -> agent_of_change_arc_direction
 			<- searchSetStr3;;
 
 			-> rrel_1: rrel_assign: rrel_scp_var: rrel_const: rrel_struct: _elem;;
-			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
 			-> rrel_3: rrel_fixed: rrel_scp_var: _param;;
 
 			-> rrel_set_1: rrel_fixed: rrel_scp_var: _possible_structs;;
 
-        		=> nrel_goto: .agent_of_change_arc_direction_operator_find_structure;;
-        		*);;
-		
+			=> nrel_goto: .agent_of_change_arc_direction_operator_find_structure;;
+			*);;
+
 		-> .agent_of_change_arc_direction_operator_find_structure
 			(*
 			<- searchElStr3;;
 
 			-> rrel_1: rrel_fixed: rrel_scp_var: _possible_structs;;
-			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
 			-> rrel_3: rrel_assign: rrel_const: rrel_scp_var: _structure;;
 
-        		=> nrel_then: .agent_of_change_arc_direction_operator_erase_struct;;  
+			=> nrel_then: .agent_of_change_arc_direction_operator_erase_struct;;  
 			=> nrel_else: .agent_of_change_arc_direction_operator_call_proc_of_transferring_incident_elements_from_one_arc_to_another;;
-        		*);;
+			*);;
 
 		-> .agent_of_change_arc_direction_operator_erase_struct
 			(*
@@ -180,19 +183,19 @@ scp_program -> agent_of_change_arc_direction
 			<- searchElStr3;;
 
 			-> rrel_1: rrel_fixed: rrel_scp_const: section;;
-			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
 			-> rrel_3: rrel_fixed: rrel_scp_var: _structure;;
 
-        		=> nrel_then: .agent_of_change_arc_direction_operator_struct_is_found;; 
+			=> nrel_then: .agent_of_change_arc_direction_operator_struct_is_found;; 
 			=> nrel_else: .agent_of_change_arc_direction_operator_find_structure;;
-        		*);;
-	
+			*);;
+
 		-> .agent_of_change_arc_direction_operator_struct_is_found
 			(*
 			<- genElStr3;;
 
 			-> rrel_1: rrel_fixed: rrel_scp_var: _structs;;
-			-> rrel_2: rrel_assign: rrel_const: rrel_pos_const_perm: rrel_scp_var: _new_arc;;
+			-> rrel_2: rrel_assign: rrel_const: rrel_scp_var: rrel_pos_const_perm: _new_arc;;
 			-> rrel_3: rrel_fixed: rrel_scp_var: _structure;;
 
 			=> nrel_goto: .agent_of_change_arc_direction_operator_struct_is_found_1;;  
@@ -203,7 +206,7 @@ scp_program -> agent_of_change_arc_direction
 			<- genElStr3;;
 
 			-> rrel_1: rrel_fixed: rrel_scp_var: _structure;;
-			-> rrel_2: rrel_assign: rrel_const: rrel_pos_const_perm: rrel_scp_var: _new_arc;;
+			-> rrel_2: rrel_assign: rrel_const: rrel_scp_var: rrel_pos_const_perm: _new_arc;;
 			-> rrel_3: rrel_fixed: rrel_scp_var: _result_arc;;
 
 			=> nrel_goto: .agent_of_change_arc_direction_operator_find_structure;; 
@@ -211,26 +214,26 @@ scp_program -> agent_of_change_arc_direction
 
 		-> .agent_of_change_arc_direction_operator_call_proc_of_transferring_incident_elements_from_one_arc_to_another
 			(*
-		  	<- call;;
+			<- call;;
 
-		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_transferring_incident_elements_from_one_arc_to_another;;
-		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_change_arc_direction_operator_call_proc_of_transferring_incident_elements_from_one_arc_to_another_params 
+			-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_transferring_incident_elements_from_one_arc_to_another;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_change_arc_direction_operator_call_proc_of_transferring_incident_elements_from_one_arc_to_another_params 
 				(*
 				-> rrel_1: rrel_fixed: rrel_scp_var: _param;;
 				-> rrel_2: rrel_fixed: rrel_scp_var: _result_arc;;
 				*);;
-		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr3;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _descr3;;
 
-		  	=> nrel_goto: .agent_of_change_arc_direction_operator_waitreturn_proc_of_transferring_incident_elements_from_one_arc_to_another;;
+			=> nrel_goto: .agent_of_change_arc_direction_operator_waitreturn_proc_of_transferring_incident_elements_from_one_arc_to_another;;
 			*);;
 
 		-> .agent_of_change_arc_direction_operator_waitreturn_proc_of_transferring_incident_elements_from_one_arc_to_another
 			(*
-		  	<- waitReturn;;
+			<- waitReturn;;
 
-		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr3;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _descr3;;
 
-		  	=> nrel_goto: .agent_of_change_arc_direction_operator_delete_param;;
+			=> nrel_goto: .agent_of_change_arc_direction_operator_delete_param;;
 			*);;
 
 		-> .agent_of_change_arc_direction_operator_delete_param
@@ -250,7 +253,7 @@ scp_program -> agent_of_change_arc_direction
 
 			=> nrel_goto: .agent_of_change_arc_direction_operator_delete_structs;;
 			*);;
-		
+
 		-> .agent_of_change_arc_direction_operator_delete_structs
 			(*
 			<- eraseEl;;
@@ -264,52 +267,52 @@ scp_program -> agent_of_change_arc_direction
 
 		-> .agent_of_change_arc_direction_operator_call_proc_of_adding_validating_message 
 			(*
-		  	<- call;;
+			<- call;;
 
-		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_adding_validating_message;;
-		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_change_arc_direction_operator_call_proc_of_adding_validating_message_params 
+			-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_adding_validating_message;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_change_arc_direction_operator_call_proc_of_adding_validating_message_params 
 				(*
 				-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
 				-> rrel_2: rrel_fixed: rrel_scp_const: [Wrong first parameter!It must be an arc!];;
 				*);;
-		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
 
-		  	=> nrel_goto: .agent_of_change_arc_direction_operator_waitreturn_proc_of_adding_validating_message;;
+			=> nrel_goto: .agent_of_change_arc_direction_operator_waitreturn_proc_of_adding_validating_message;;
 			*);;
 
 		-> .agent_of_change_arc_direction_operator_waitreturn_proc_of_adding_validating_message
 			(*
-		  	<- waitReturn;;
+			<- waitReturn;;
 
-		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
 
-		  	=> nrel_goto: .agent_of_change_arc_direction_operator_return;;
+			=> nrel_goto: .agent_of_change_arc_direction_operator_return;;
 			*);;
 
 		-> .agent_of_change_arc_direction_operator_call_proc_of_adding_validating_message_1
 			(*
-		  	<- call;;
+			<- call;;
 
-		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_adding_validating_message;;
-		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_change_arc_direction_operator_call_proc_of_adding_validating_message_1_params 
+			-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_adding_validating_message;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_change_arc_direction_operator_call_proc_of_adding_validating_message_1_params 
 				(*
 				-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
 				-> rrel_2: rrel_fixed: rrel_scp_const: [Edge has no direction!];;
 				*);;
-		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr2;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _descr2;;
 
-		  	=> nrel_goto: .agent_of_change_arc_direction_operator_waitreturn_proc_of_adding_validating_message_1;;
+			=> nrel_goto: .agent_of_change_arc_direction_operator_waitreturn_proc_of_adding_validating_message_1;;
 			*);;
 
 		-> .agent_of_change_arc_direction_operator_waitreturn_proc_of_adding_validating_message_1
 			(*
-		  	<- waitReturn;;
+			<- waitReturn;;
 
-		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr2;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _descr2;;
 
-		  	=> nrel_goto: .agent_of_change_arc_direction_operator_return;;
-
+			=> nrel_goto: .agent_of_change_arc_direction_operator_return;;
 			*);;
+
 		-> .agent_of_change_arc_direction_operator_return
 			(*
 			<- return;;
