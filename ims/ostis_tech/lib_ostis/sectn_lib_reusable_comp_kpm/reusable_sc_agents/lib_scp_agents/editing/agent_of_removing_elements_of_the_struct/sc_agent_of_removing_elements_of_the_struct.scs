@@ -1,6 +1,8 @@
 sc_agent_of_removing_elements_of_the_struct
 => nrel_main_idtf:
-	[агентная scp-программа удаления элементов структуры] (* <- lang_ru;; *);
+	[агентная scp-программа удаления элементов структуры]
+	(* <- lang_ru;; *);
+=> nrel_main_idtf:
 	[agent scp-program of removing elements of the struct] (* <- lang_en;; *);
 
 <- abstract_sc_agent;
@@ -24,7 +26,8 @@ sc_agent_of_removing_elements_of_the_struct
 	<- platform_independent_abstract_sc_agent;;
 	<= nrel_sc_agent_program: 
 		{
-		agent_of_removing_elements_of_the_struct
+		agent_of_removing_elements_of_the_struct;
+		proc_of_adding_validating_message
 		};;		
 
 	-> sc_agent_of_removing_elements_of_the_struct_scp    

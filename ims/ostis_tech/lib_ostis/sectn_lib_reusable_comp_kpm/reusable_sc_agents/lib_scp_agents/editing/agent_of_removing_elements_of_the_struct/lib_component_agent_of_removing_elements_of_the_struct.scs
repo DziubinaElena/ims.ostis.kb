@@ -2,6 +2,7 @@ lib_component_agent_of_removing_elements_of_the_struct
 => nrel_main_idtf:
 	[Компонент библиотеки. sc-агент удаления элементов структуры]
 	(* <- lang_ru;; *);
+=> nrel_main_idtf:
 	[Library component. sc-agent of removing elements of the struct]
 	(* <- lang_en;; *);
 
@@ -29,8 +30,10 @@ lib_component_agent_of_removing_elements_of_the_struct
 
 action_to_removing_elements_of_the_struct <- sc_node_not_relation;;
 
-action_to_removing_elements_of_the_struct => nrel_main_idtf: 
+action_to_removing_elements_of_the_struct
+=> nrel_main_idtf: 
 	[действие. удалить элементы структуры] 
 	(* <- lang_ru;; *);
+=> nrel_main_idtf:
 	[action. remove elements of the struct] 
 	(* <- lang_en;; *);;
