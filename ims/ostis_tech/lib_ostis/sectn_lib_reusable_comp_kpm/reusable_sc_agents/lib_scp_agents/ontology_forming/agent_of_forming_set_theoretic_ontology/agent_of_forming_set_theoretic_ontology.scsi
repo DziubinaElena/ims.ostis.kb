@@ -143,7 +143,7 @@ scp_program -> agent_of_forming_set_theoretic_ontology
 			(*
 			<- genEl;;
 
-			-> rrel_1: rrel_assign: rrel_scp_var: rrel_node: _answer_form_set_theoretic_ontology;;
+			-> rrel_1: rrel_assign: rrel_scp_var: rrel_struct: rrel_node: rrel_const: _answer_form_set_theoretic_ontology;;
 
 			=> nrel_goto: .agent_of_forming_set_theoretic_ontology_operator3B;;
 			*);;
@@ -236,15 +236,6 @@ scp_program -> agent_of_forming_set_theoretic_ontology
 			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: rrel_const: _arc3;;
 			-> rrel_5: rrel_fixed: rrel_scp_const: rrel_key_sc_element;;
 
-			=> nrel_goto: .agent_of_forming_set_theoretic_ontology_operator4D_test;;
-			*);;
-
-		-> .agent_of_forming_set_theoretic_ontology_operator4D_test
-			(*
-			<- printEl;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _object;;
-
 			=> nrel_goto: .agent_of_forming_set_theoretic_ontology_operator4D;;
 			*);;
 
@@ -257,6 +248,7 @@ scp_program -> agent_of_forming_set_theoretic_ontology
 				(*
 				-> rrel_1: rrel_fixed: rrel_scp_var: _object;;
 				-> rrel_2: rrel_fixed: rrel_scp_var: _ontology;;
+				-> rrel_3: rrel_fixed: rrel_scp_const: [true];;
 				*);;
 			-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
 
@@ -359,15 +351,6 @@ scp_program -> agent_of_forming_set_theoretic_ontology
 			<- eraseEl;;
 
 			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: rrel_node: _set_of_concepts;;
-
-			=> nrel_goto: .agent_of_forming_set_theoretic_ontology_operator_print_answer1;;
-			*);;
-
-		-> .agent_of_forming_set_theoretic_ontology_operator_print_answer1
-			(*
-			<- printEl;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_form_set_theoretic_ontology;;
 
 			=> nrel_goto: .agent_of_forming_set_theoretic_ontology_operator_gen_answer;;
 			*);;
